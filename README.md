@@ -17,7 +17,7 @@ The information included in each summary table is as follows:
 * Total: Total money paid out by the company.
 * Tail Value at Risk (TVaR) 95: The average of all policies which paid in the 95th percentile or higher.
 * Tail Value at Risk (TVaR) 99: The average of all policies which paid in the 99th percentile or higher.
-* 
+* Loss Elimination Ratio (LER): The percentage reduction in the company's payouts given the corridor deductible plan.
 
 ## Explicit Model Assumptions
 
@@ -35,8 +35,14 @@ The initial conditions were:
 
 ![here](https://imgur.com/NMDNCUH.png)
 
+## Insights
+
+For some claim frequencies and severities, especially large numbers of each, the corridor deductible plan yields rougly the same total payouts
+as the standard deductible plan. Psychologically, getting the first X paid by the company is more appetizing than 
+paying the deductible first yourself, so in these cases, it would be natural to assume more customers would purchase this corridor deductible plan.
+
 ## How To Run
 
 You can use the file seen [here](First_X_Free.py) to run the code!
 
-## 
+The parameters are adjustable and comments are left to explain which variables can be edited.
