@@ -1,10 +1,11 @@
 # First X Free
 
-This repo is a study of how changing corridor deductible structure changes the overall cost to an insurance company.
+This repository studies how corridor deductible structures affect insurer payouts and tail risk.
 
 ## About
 
-Corridor deductibles are deductibles which are applied after the insurance company already pays a certain amount.
+Corridor deductibles are deductible structures in which the insurer initially covers losses up to a threshold, 
+after which the insured absorbs a specified layer of losses before insurer coverage resumes.
 For instance, the insurance company may begin by paying the first $500, after which the policyholder pays a deductible of $1000 before the company pays the rest.
 
 This model evaluates the merits of these corridor deductibles and how they affect the average and total payouts of the insurance company.
@@ -31,15 +32,19 @@ The information included in each summary table is as follows:
 This image shows what happens in the case where a deductible of $3,000 is applied and it is offset by varying amounts.
 The initial conditions were:
 * 80,000 policyholders, each with a frequency probability of 0.09.
-* Each accident follows a lognormal distribution with modified mean $1,500 and standard deviation 0.8. (Note that anything over 1.5 swings very wildly.)
+* Claim severities are modeled using a lognormal distribution calibrated to a target expected severity (in this case $1,500) and adjustable variance parameter (in this case 0.8).
 
 ![here](https://imgur.com/NMDNCUH.png)
 
 ## Insights
 
-For some claim frequencies and severities, especially large numbers of each, the corridor deductible plan yields rougly the same total payouts
-as the standard deductible plan. Psychologically, getting the first X paid by the company is more appetizing than 
-paying the deductible first yourself, so in these cases, it would be natural to assume more customers would purchase this corridor deductible plan.
+While the body of the distribution is varied based on the offset of the deductible being triggered, after a certain point,
+the graphs rejoin. This indicates the tail behavior is not affected strongly by the offsetting, and large payouts occur in similar frequencies.
+
+For some claim frequencies and severities, especially when the mean payment is high, the corridor deductible plan yields roughly the same total payouts
+as the standard deductible plan. 
+From a consumer perspective, policies that provide immediate partial coverage may appear more attractive than standard deductible structures, 
+even when expected insurer payouts are similar.
 
 ## How To Run
 
