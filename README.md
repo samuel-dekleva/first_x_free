@@ -11,7 +11,7 @@ For instance, the insurance company may begin by paying the first $500, after wh
 This model evaluates the merits of these corridor deductibles and how they affect the average and total payouts of the insurance company.
 
 The model operates using a one-year simulation of an adjustable number of policyholders. The accident frequency and severity are likewise adjustable.
-Deductibles and stratifications in a list are then tested and compared. 
+Deductible structures are then compiled, tested, and compared. 
 The output is a summary table of each offset for each deductible and a survival plot for each offset.
 The information included in each summary table is as follows:
 * Mean paid out per policyholder: The average payment to each policyholder.
@@ -38,8 +38,8 @@ The initial conditions were:
 
 ## Insights
 
-While the body of the distribution is varied based on the offset of the deductible being triggered, after a certain point,
-the graphs rejoin. This indicates the tail behavior is not affected strongly by the offsetting, and large payouts occur in similar frequencies.
+While the body of the distribution is varied based on the offset of the deductible being triggered, the survival curves converge in the extreme tail. 
+This indicates the tail behavior is not affected strongly by the offsetting, and large payouts occur in similar frequencies.
 
 For some claim frequencies and severities, especially when the mean payment is high, the corridor deductible plan yields roughly the same total payouts
 as the standard deductible plan. 
