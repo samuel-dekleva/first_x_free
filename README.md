@@ -24,7 +24,7 @@ The information included in each summary table is as follows:
 
 This image shows what happens in the case where a deductible of $3,000 is applied and it is offset by varying amounts.
 The initial conditions were:
-* 80,000 policyholders, each with a frequency probability of 0.09.
+* 80,000 policyholders, each with an expected accident frequency of 0.09.
 * Claim severities are modeled using a lognormal distribution calibrated to a target expected severity (in this case $1,500) and adjustable variance parameter (in this case 0.8).
 
 ![here](https://imgur.com/NMDNCUH.png)
