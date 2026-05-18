@@ -20,13 +20,6 @@ The information included in each summary table is as follows:
 * Tail Value at Risk (TVaR) 99: The average of all policies which paid in the 99th percentile or higher.
 * Loss Elimination Ratio (LER): The percentage reduction in the company's payouts given the corridor deductible plan.
 
-## Explicit Model Assumptions
-
-* Throughout, we assume independence of claims.
-* The frequency of claims for each policyholder is modeled using a Poisson distribution with adjustable parameter lambda.
-* We assume the cost of each claim is modeled by a lognormal distribution with adjustable mean and standard deviation.
-* Importantly, we also assume claims for each policyholder are aggregated prior to applying any corridor deductibles.
-
 ## Example Model Output
 
 This image shows what happens in the case where a deductible of $3,000 is applied and it is offset by varying amounts.
@@ -35,6 +28,13 @@ The initial conditions were:
 * Claim severities are modeled using a lognormal distribution calibrated to a target expected severity (in this case $1,500) and adjustable variance parameter (in this case 0.8).
 
 ![here](https://imgur.com/NMDNCUH.png)
+
+## Explicit Model Assumptions
+
+* Throughout, we assume independence of claims.
+* The frequency of claims for each policyholder is modeled using a Poisson distribution with adjustable parameter lambda.
+* We assume the cost of each claim is modeled by a lognormal distribution with adjustable mean and standard deviation.
+* Importantly, we also assume claims for each policyholder are aggregated prior to applying any corridor deductibles.
 
 ## Insights
 
